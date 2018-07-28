@@ -1,17 +1,13 @@
-## Put comments here that give an overall description of what your
-## functions do
-
 ## A pair of functions that cache the inverse of a matrix
 
 
 ## Creates a special matrix object that can cache its inverse
 makeCacheMatrix <- function( m = matrix() ) {
-  
   ## Initialize the inverse property
   i <- NULL
   
-  ## Method to set the matrix
-  set <- function( matrix ) {
+  ##Setting the matrix
+  set_matrix <- function( matrix ) {
     m <<- matrix
     i <<- NULL
   }
@@ -34,7 +30,7 @@ makeCacheMatrix <- function( m = matrix() ) {
   }
   
   ## Return a list of the methods
-  list(set = set, get = get,
+  list(set_matrix = set_matrix, get = get,
        setInverse = setInverse,
        getInverse = getInverse)
 }
